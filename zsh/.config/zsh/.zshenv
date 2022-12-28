@@ -4,7 +4,7 @@ export XDG_STATE_HOME=$HOME/.local/state
 export XDG_CACHE_HOME=$HOME/.cache
 
 export ZSH="$XDG_DATA_HOME/.oh-my-zsh"
-export PATH="$HOME/Scripts:$PATH"
+export PATH="$HOME/Scripts:$HOME/.local/bin:$PATH"
 export HISTFILE="$XDG_STATE_HOME"/zsh/history
 
 # Wayland global variables
