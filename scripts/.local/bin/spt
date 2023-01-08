@@ -1,0 +1,32 @@
+#!/bin/bash
+
+### When saving this script, please run "chmod +x" on it to make it executable! ###
+# Default behaviour is that "spotifyd' is killed when "spt" is closed.
+# To make spotifyd continue running in the background, simple start the command with the "-b" argument.
+
+keepSptdInBackground=false
+POSITIONAL=()
+
+while [[ $# -gt 0 ]]; do
+  key="$1"
+  case $key in
+    -b|--keep-in-background)
+        EXTENSION="$2"
+        keepSptdInBackground=true
+        shift # past argument
+        shift # past value
+        ;;
+    *)    # unknown option
+        POSITIONAL+=("$1") # save it in an array for later
+        shift
+        ;;
+  esac
+done
+
+if $keepSptdInBackground;
+then
+  spotifyd && spotify-tui
+else
+  (spotifyd -b pulseaudio --no-daemon --config-path ~/.config/spotifyd/spotifyd &> /dev/null) & spotifydPID="$!"
+  spotify-tui && kill $spotifydPID
+fi
