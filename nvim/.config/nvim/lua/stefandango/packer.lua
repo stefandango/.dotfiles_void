@@ -47,6 +47,7 @@ require('packer').startup(function(use)
 		'VonHeikemen/lsp-zero.nvim',
 		requires = {
 			-- LSP Support
+			-- pv pv
 			{'neovim/nvim-lspconfig'},
 			{'williamboman/mason.nvim'},
 			{'williamboman/mason-lspconfig.nvim'},
@@ -81,6 +82,7 @@ require('packer').startup(function(use)
 	use ('tpope/vim-sleuth') -- Detect tabstop and shiftwidth automatically
 	use ('karb94/neoscroll.nvim') -- smoothscroll when using c-d / c-u
 
+	--use ('navarasu/onedark.nvim')
 
 	-- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
 	local has_plugins, plugins = pcall(require, 'custom.plugins')

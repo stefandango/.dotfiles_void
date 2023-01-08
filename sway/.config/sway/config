@@ -204,8 +204,10 @@ bindsym $mod+r mode "resize"
 
 bindsym $mod+Shift+s exec ~/.local/bin/swap-workspaces.sh
 
-
-#
+# anything with floating title floats.
+for_window [title="floating-*"]   floating enable
+#insync float
+for_window [title="floating-*"]   floating enable #
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
@@ -243,7 +245,7 @@ set $clipboard "~/.local/share/clipman.json"
 exec wl-paste -t text --watch clipman store --max-items 1024
 bindsym $mod+y exec clipman pick --tool="wofi" --max-items=30
 
-#PIPEWIRE SOUND
-#https://www.reddit.com/r/voidlinux/comments/lp5w87/how_i_got_pipewire_working_on_void_as_a_pulse/iu
-exec pipewire
-exec insync start
+#PIPEWIRE SOUND #https://www.reddit.com/r/voidlinux/comments/lp5w87/how_i_got_pipewire_working_on_void_as_a_pulse/iu
+exec pipewire &
+exec pipewire-pulse &
+exec insync start &
