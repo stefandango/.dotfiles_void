@@ -9,8 +9,8 @@
 * Global configuration for theme 
 * */
 * {
-  font-family: Liga SFMono Nerd Font;
-  font-size: 14px;
+  font-family: JetBrains Mono SemiBold Nerd Font Complete Mono;  /*Liga SFMono Nerd Font;*/
+  font-size: 12px;
 }
 
 window#waybar {
