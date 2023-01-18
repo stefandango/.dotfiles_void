@@ -1,2 +1,3 @@
 nvim/.config/nvim/plugin/packer_compiled.lua
 spotify/.config/spotify-tui/.spotify_token_cache.json
+zsh/.config/zsh/.zcompdump-*

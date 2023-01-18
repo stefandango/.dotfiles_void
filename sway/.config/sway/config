@@ -207,7 +207,11 @@ bindsym $mod+Shift+s exec ~/.local/bin/swap-workspaces.sh
 # anything with floating title floats.
 for_window [title="floating-*"]   floating enable
 #insync float
-for_window [title="floating-*"]   floating enable #
+for_window [title="Insync"]   floating enable
+#popup term (primary for clickevents in waybar
+for_window [title="popup_term"]   floating enable 
+#pavucontontrol
+for_window [app_id="pavucontrol"]   floating enable 
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.

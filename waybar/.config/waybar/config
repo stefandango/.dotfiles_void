@@ -1,186 +1,154 @@
-[
-	{
-		"layer": "top", // Waybar at top layer
-		"position": "top", // top|left|bottom|right
-		/* "output": "DP-2", // BOTTOM MONITOR */
-		"modules-center": [
-			"sway/window"
-		],
-		"modules-left": [
-			"sway/workspaces"
-		],
-		"modules-right": [
-			"tray",
-			/*"custom/pipewire",*/
-            "pulseaudio",
-			"network",
-			"cpu",
-			"memory",
-			"disk",
-			"temperature",
-			"keyboard-state",
-			"clock",
-			"user",
-			"custom/wlogout"
-		],
-		"sway/workspaces": {
-			"all-outputs": true,
-			"format": "{icon}",
-			"format-icons": {
-				"1": "",
-				"2": "",
-				"3": "",
-				"4": "",
-				"5": "",
-				"6": "",
-				"7": "",
-				"urgent": "",
-				"default": ""
-			}
-		},
-		"keyboard-state": {
-			"numlock": true,
-			"capslock": true,
-			"format": "{icon} {name}",
-			"format-icons": {
-				"locked": "",
-				"unlocked": ""
-			}
-		},
-		"mpd": {
-			"format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-			"format-disconnected": "Disconnected ",
-			"format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
-			"unknown-tag": "N/A",
-			"interval": 2,
-			"consume-icons": {
-				"on": " "
-			},
-			"random-icons": {
-				"off": "<span color=\"#f53c3c\"></span> ",
-				"on": " "
-			},
-			"repeat-icons": {
-				"on": " "
-			},
-			"single-icons": {
-				"on": "1 "
-			},
-			"state-icons": {
-				"paused": "",
-				"playing": ""
-			},
-			"tooltip-format": "MPD (connected)",
-			"tooltip-format-disconnected": "MPD (disconnected)"
-		},
-		"idle_inhibitor": {
-			"format": "{icon}",
-			"format-icons": {
-				"activated": "",
-				"deactivated": ""
-			}
-		},
-		"tray": {
-			// "icon-size": 21,
-			"spacing": 10
-		},
-		"clock": {
-			"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-			"format": "{:%I:%M %p}",
-			"format-alt": "{:%Y-%m-%d}"
-		},
-		"cpu": {
-			"format": " {usage}%",
-			"tooltip": true
-		},
-		"memory": {
-			"format": " {}%"
-		},
-		"disk": {
-			"format": " {percentage_used}%"
-		},
-		"temperature": {
-			//"hwmon-path": "/sys/devices/platform/asus-ec-sensors/hwmon/hwmon4/temp3_input",
-			//"hwmon-path-abs": "/sys/devices/platform/asus-ec-sensors/hwmon",
-			"hwmon-path-abs": "/sys/devices/pci0000:00/0000:00:18.3/hwmon",
-			"input-filename": "temp3_input",
-			"critical-threshold": 80,
-			"format-critical": "{temperatureC}°C {icon}",
-			"format": "{icon} {temperatureC}°C",
-			"format-icons": [
-				"",
-				"",
-				""
-			],
-			"interval": "5"
-		},
-		"network": {
-			"format-wifi": " {essid} ({signalStrength}%)",
-			"format-ethernet": " {ipaddr}",
-			"tooltip-format": " {ifname} via {gwaddr}",
-			"format-linked": " {ifname} (No IP)",
-			"format-disconnected": " Disconnected",
-			"format-alt": "{ifname}: {ipaddr}/{cidr}"
-		},
-		"custom/pipewire": {
-			"exec": "pw-volume status",
-			"return-type": "json",
-			"interval": "once",
-			"signal": 8,
-			"format": "{icon} {percentage}",
-			"format-icons": {
-				"mute": "",
-				"default": [
-					"",
-					"",
-					""
-				]
-			},
-			"on-click": "pavucontrol"
-		},
-        "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
-        },
-        "on-click": "pavucontrol"
-        },
-		"custom/media": {
-			"format": "{icon} {}",
-			"return-type": "json",
-			"max-length": 40,
-			"format-icons": {
-				"spotify": "",
-				"default": "🎜"
-			},
-			"escape": true,
-			"exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-			// "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-		},
-		"user": {
-			"format": "{user}",
-			"interval": 60,
-			"height": 30,
-			"width": 30,
-			"icon": true,
-		},
-		"custom/wlogout": {
-			"format": "",
-			"interval": "once",
-			"on-click": "wlogout -c 5 -r 5 -p layer-shell"
-		}
-	}
-]
+{
+  "name": "ayu-dark", /* Options: ayu, ayu-mirage, ayu-dark */
+  "layer": "top",
+  "position": "top",
+  "height": 50,
+  "modules-left": [
+      "sway/workspaces",
+  "sway/mode"
+  ],
+  "modules-center": ["clock", "custom/wttr"
+  ],
+  "modules-right": [
+    "keyboard-state",
+    "custom/xbps",
+    "custom/disks",
+    "memory",
+    "cpu",
+    "temperature",
+    "pulseaudio",
+    "network",
+    "tray",
+    "custom/wlogout"
+  ],
+  "custom/separator": {
+    "format": "·",
+    "tooltip": false
+  },
+  "sway/mode": {
+    "format": "---{}---"
+  },
+  "sway/workspaces": {
+      "all-outputs": true,
+      "format": "{icon}",
+      "format-icons": {
+          "1": "",
+          "2": "",
+          "3": "",
+          "4": "",
+          "5": "",
+          "6": "",
+          "7": "",
+          "urgent": "",
+          "default": ""
+      }
+  },
+  "tray": {
+    "icon-size": 16,
+    "spacing": 22
+  },
+  "clock": {
+    "format": "{:%H:%M}",
+    "format-alt": "{:%A, %B %d}",
+    "tooltip": false
+  },
+  /* "custom/system": { */
+  /*   "format": "", */
+  /*   "on-click": "swaynag -t ayu-mirage -m '' -b 'Exit' 'swaymsg exit' -b 'Reload' 'swaymsg reload' -b 'Reboot' 'swaymsg exec systemctl reboot' -b 'Shut down' 'systemctl poweroff'", */
+  /*   "on-click-right": "swaymsg mode System" */
+  /* }, */
+  /* "custom/browser": { */
+  /*   "format": "", */
+  /*   "tooltip": false, */
+  /*   "on-click": "if pgrep -x firefox-bin; then swaymsg [app_id=\"firefox\"] focus; else firefox-nightly; fi", */
+  /*   "on-click-right": "firefox-nightly --new-window" */
+  /* }, */
+  /* "custom/files": { */
+  /*   "format": "", */
+  /*   "tooltip": false, */
+  /*   "on-click": "nautilus" */
+  /* }, */
+  /* "custom/editor": { */
+  /*   "format": "", */
+  /*   "tooltip": false, */
+  /*   "on-click": "if pgrep -x code-insiders; then swaymsg [instance=\"code - insiders\"] focus; else code-insiders; fi" */
+  /* }, */
+  /* "custom/terminal": { */
+  /*   "format": "", */
+  /*   "tooltip": false, */
+  /*   "on-click": "swaymsg scratchpad show", */
+  /*   "on-click-right": "urxvt -bg rgba:1000/1000/1000/0000 -T transparent_term" */
+  /* }, */
+  "custom/xbps": {
+      "format": "↓ {}",
+          "return-type": "json",
+          "exec": "~/.local/bin/xbps-updates.sh",
+          "interval": 600,
+          "on-click": "kitty --hold -T popup_term -e sudo xbps-install -Su; pkill -SIGRTMIN+8 waybar",
+          "signal": 8
+  },  
+  "custom/disks": {
+    "exec": "~/.local/bin/waybar-diskinfo.sh",
+    "return-type": "json",
+    "format": "  {}",
+    "on-click": "kitty --hold -T popup_term -e btop",
+    "interval": 30,
+    "tooltip": true
+  },
+
+  "custom/wttr": {
+    "exec": "curl wttr.in/Valby,Denmark?format=\"%c+%t\"",
+    "on-click": "kitty --hold -T popup_term -e curl wttr.in/Valby,Denmark",
+    "interval": 1800,
+    "tooltip": false
+  },
+  "pulseaudio": {
+    "format": "{icon}  {volume}%",
+    "format-bluetooth": "{icon} ",
+    "format-muted": "",
+    "format-icons": {
+      "headphones": "",
+      "handsfree": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", ""]
+    },
+    "scroll-step": 5,
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    /*"on-click-middle": "pavucontrol",*/
+
+    "on-click-right": "pavucontrol",
+    "tooltip": false
+  }, "temperature": { "thermal-zone": 2, "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input", "critical-threshold": 80, "on-click": "kitty --hold -T popup_term -e btop", "format-critical": "{temperatureC}°C ", "format": " {temperatureC}°C" }, "cpu": { "on-click": "kitty --hold -T popup_term -e btop", "tooltip": false, "format": "  {}%" }, "network": { "format": "{icon}  {ifname}", "format-wifi": "{icon}  {essid}", "format-ethernet": "{icon}  {ipaddr}", "format-disconnected": "Offline",
+    "format-icons": {
+      "wifi": [""],
+      "ethernet": [""],
+      "disconnected": [""]
+    },
+    "tooltip": true,
+    "tooltip-format": "Network:{ifname}\nIP:{ipaddr}\nRate: {bandwidthUpBits} / {bandwidthDownBits}"
+  },
+  "memory": {
+    "interval": 30,
+    "format": "  {avail:0.1f}GB",
+    "tooltip": true,
+    "tooltip-format": "{used:0.1f}GB / {total:0.1f}GB"
+  },
+  "keyboard-state": {
+      "numlock": true,
+      "capslock": true,
+      "format": "{icon} {name}",
+      "format-icons": {
+          "locked": "",
+          "unlocked": ""
+      }
+  },
+  "custom/wlogout": {
+      "interval": "once",
+      "format": "",
+      "on-click": "wlogout -c 5 -r 5 -p layer-shell"
+  }
+}
 
