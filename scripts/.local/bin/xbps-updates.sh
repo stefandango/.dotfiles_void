@@ -9,5 +9,5 @@ COUNT=$(printf "%b" "$STATUS" | wc -l)
 if [ "$COUNT" -gt 0 ]; then
 	printf '{"text": "%s", "tooltip": "%s"}\n' "$COUNT" "$STATUS"
 else
-	printf ''
+	printf '{"text": "TEST"}'
 fi

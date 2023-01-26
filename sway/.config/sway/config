@@ -253,3 +253,6 @@ bindsym $mod+y exec clipman pick --tool="wofi" --max-items=30
 exec pipewire &
 exec pipewire-pulse &
 exec insync start &
+
+# REFRESH WAYBAR
+exec ~/.local/bin/waybar-refresh.sh &

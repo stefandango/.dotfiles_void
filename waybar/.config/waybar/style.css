@@ -85,6 +85,12 @@
   padding: 0 12px;
 }
 
+#custom-xbps {
+  background-color: #98C379;
+  color: #282C34;
+  padding: 0 12px;
+}
+
 #idle_inhibitor {
   padding: 0 18px;
 }
