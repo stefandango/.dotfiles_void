@@ -80,7 +80,8 @@
 #custom-separator,
 #custom-wlogout,
 #keybard-state,
-#sway-mode
+#sway-mode,
+#custom-razerviperbattery,
 #mode {
   padding: 0 12px;
 }
@@ -88,7 +89,25 @@
 #custom-xbps {
   background-color: #98C379;
   color: #282C34;
-  padding: 0 12px;
+  padding: 0 20px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+#custom-razerviperbattery.warning {
+  background-color: #E5C07B;
+  color: #282C34;
+  padding: 0 8px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+#custom-razerviperbattery.alert {
+  background-color: #E06C75;
+  color: #282C34;
+  padding: 0 8px;
+  border-radius: 10px;
+  margin: 10px;
 }
 
 #idle_inhibitor {

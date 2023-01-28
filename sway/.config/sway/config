@@ -252,7 +252,12 @@ bindsym $mod+y exec clipman pick --tool="wofi" --max-items=30
 #PIPEWIRE SOUND #https://www.reddit.com/r/voidlinux/comments/lp5w87/how_i_got_pipewire_working_on_void_as_a_pulse/iu
 exec pipewire &
 exec pipewire-pulse &
+
+#Google drive
 exec insync start &
+
+#Mousedriver
+exec openrazer-daemon &
 
 # REFRESH WAYBAR
 exec ~/.local/bin/waybar-refresh.sh &

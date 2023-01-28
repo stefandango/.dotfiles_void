@@ -12,6 +12,7 @@
   "modules-right": [
     "keyboard-state",
     "custom/xbps",
+    "custom/razerviperbattery",
     "custom/disks",
     "memory",
     "cpu",
@@ -149,6 +150,12 @@
       "interval": "once",
       "format": "",
       "on-click": "wlogout -c 5 -r 5 -p layer-shell"
+  },
+  "custom/razerviperbattery": {
+      "interval": 15,
+      "exec": "~/.local/bin/viper_battery.py",
+       "return-type": "json",
+      "tooltip": false
   }
 }
 
