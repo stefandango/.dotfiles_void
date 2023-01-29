@@ -256,8 +256,8 @@ exec pipewire-pulse &
 #Google drive
 exec insync start &
 
-#Mousedriver
-exec openrazer-daemon &
+#Notification app
+exec mako & 
 
 # REFRESH WAYBAR
 exec ~/.local/bin/waybar-refresh.sh &
