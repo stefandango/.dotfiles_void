@@ -96,7 +96,8 @@ require('packer').startup(function(use)
 	use ('karb94/neoscroll.nvim') -- smoothscroll when using c-d / c-u
 
 	--use ('navarasu/onedark.nvim')
-	use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
+	--use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
+	use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 
 	-- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
 	local has_plugins, plugins = pcall(require, 'custom.plugins')

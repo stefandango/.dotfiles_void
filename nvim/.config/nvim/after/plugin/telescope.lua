@@ -1,6 +1,6 @@
 local builtin = require('telescope.builtin')
 
-require("telescope").load_extension "file_browser"
+require("telescope")
 --vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
 --vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
 --vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[S]earch by [G]rep' })
