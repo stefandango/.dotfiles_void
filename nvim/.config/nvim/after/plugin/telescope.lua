@@ -18,4 +18,4 @@ vim.keymap.set('n', '<leader>fh', builtin.keymaps, {desc = "[F]ind [H]elp - view
 vim.keymap.set('n', '<leader>fd', builtin.diagnostics, { desc = "[F]ind [d]iagnostics - view all"})
 vim.keymap.set('n', '<leader>?', builtin.oldfiles, { desc = "Search oldfiles"})
 
-vim.api.nvim_set_keymap("n", "<space>fe", ":Telescope file_browser<CR>", { noremap = true })
+--vim.api.nvim_set_keymap("n", "<space>fe", ":Telescope file_browser<CR>", { noremap = true })
