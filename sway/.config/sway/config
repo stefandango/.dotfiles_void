@@ -18,7 +18,8 @@
 	# Your preferred application launcher
 	# Note: pass the final command to swaymsg so that the resulting window can be opened
 	# on the original workspace that the command was run on.
-	set $menu exec wofi --show drun
+	# set $menu exec wofi --show drun
+    set $menu exec fuzzel
 
 	### Output configuration
 	#
@@ -247,7 +248,7 @@ exec ~/.local/bin/wallpaper-shuffle.sh &
 #CLIPBOARD MANAGER
 set $clipboard "~/.local/share/clipman.json"
 exec wl-paste -t text --watch clipman store --max-items 1024
-bindsym $mod+y exec clipman pick --tool="wofi" --max-items=30
+bindsym $mod+y exec clipman pick --tool="fuzzel" --max-items=30
 
 #PIPEWIRE SOUND #https://www.reddit.com/r/voidlinux/comments/lp5w87/how_i_got_pipewire_working_on_void_as_a_pulse/iu
 exec pipewire &
