@@ -27,3 +27,5 @@ export PYTHONSTARTUP="/etc/python/pythonrc"
 # Readline
 export INPUTRC="$XDG_CONFIG_HOME"/readline/inputrc
 
+# GOLang
+export GOPATH="$XDG_DATA_HOME"/go

@@ -46,4 +46,4 @@ require("nvim-tree").setup({
 })
 
 vim.api.nvim_set_keymap("n", "<space>fe", ":NvimTreeToggle<CR>", { noremap = true })
-vim.api.nvim_set_keymap("n", "<C-.>", ":NvimTreeToggle<CR>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<space>.", ":NvimTreeToggle<CR>", { noremap = true })
