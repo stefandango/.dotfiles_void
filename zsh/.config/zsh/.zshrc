@@ -67,7 +67,7 @@
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sudo colored-man-pages command-not-found zsh-autosuggestions zsh-syntax-highlighting history tmux copypath)
+plugins=(git sudo colored-man-pages command-not-found zsh-autosuggestions zsh-syntax-highlighting history tmux copypath zsh-fzf-history-search)
 
 # ADD FOR zsh-completions
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
@@ -103,5 +103,6 @@ alias tmux="tmux -f ~/.config/tmux/tmux.conf"
 
 # ZSH keybinding
 bindkey -s ^f "tmux-sessionizer\n"
+bindkey -s ^h "fzf_history\n"
 
 eval "$(starship init zsh)"

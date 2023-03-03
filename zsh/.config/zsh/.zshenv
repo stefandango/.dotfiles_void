@@ -5,7 +5,10 @@ export XDG_CACHE_HOME=$HOME/.cache
 
 export ZSH="$XDG_DATA_HOME/.oh-my-zsh"
 export PATH="$HOME/Scripts:$HOME/.local/bin:$PATH"
-export HISTFILE="$XDG_STATE_HOME"/zsh/history
+export HISTFILE="$XDG_STATE_HOME/zsh/.zsh_history"
+HISTSIZE=1000
+SAVEHIST=1000
+setopt SHARE_HISTORY
 
 # Wayland global variables
 export BMENU_BACKEND=wayland
