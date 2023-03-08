@@ -103,6 +103,5 @@ alias tmux="tmux -f ~/.config/tmux/tmux.conf"
 
 # ZSH keybinding
 bindkey -s ^f "tmux-sessionizer\n"
-bindkey -s ^h "fzf_history\n"
 
 eval "$(starship init zsh)"
