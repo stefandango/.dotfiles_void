@@ -1,4 +1,5 @@
 #XDG environment variables
+export XDG_CONFIG_HOME=$HOME/.config
 export XDG_DATA_HOME=$HOME/.local/share
 export XDG_STATE_HOME=$HOME/.local/state
 export XDG_CACHE_HOME=$HOME/.cache
@@ -10,7 +11,7 @@ HISTSIZE=1000
 SAVEHIST=1000
 setopt SHARE_HISTORY
 
-# Wayland global variables
+# Waylan global variables
 export BMENU_BACKEND=wayland
 export SDL_VIDEODRIVER=wayland
 export MOZ_ENABLE_WAYLAND=1
@@ -32,3 +33,10 @@ export INPUTRC="$XDG_CONFIG_HOME"/readline/inputrc
 
 # GOLang
 export GOPATH="$XDG_DATA_HOME"/go
+
+# DOTNET
+export DOTNET_ROOT=$HOME/.dotnet
+export PATH=$PATH:$HOME/.dotnet:$HOME/.dotnet/tools
+
+# OmniSharp
+export OMNISHARPHOME="$XDG_CONFIG_HOME"/omnisharp
