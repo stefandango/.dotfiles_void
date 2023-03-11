@@ -1,8 +1,19 @@
 {
-  "RoslynExtensionsOptions": {
-    "enableAnalyzersSupport": true
-  },
-  "FormattingOptions": {
-    "enableEditorConfigSupport": true
-  }
+    "RoslynExtensionsOptions": {
+        "enableAnalyzersSupport": true,
+        "enableImportCompletion": true
+    },
+    "FormattingOptions": {
+        "enableEditorConfigSupport": true,
+        "OrganizeImports": true
+    },
+      "RenameOptions": {
+        "RenameInComments": true,
+        "RenameOverloads": true,
+        "RenameInStrings": true
+    },
+    "Script": {
+        "enabled": true,
+        "enableScriptNuGetReferences": true
+    }
 }
