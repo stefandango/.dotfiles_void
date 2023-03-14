@@ -99,6 +99,7 @@ require('packer').startup(function(use)
 	--use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
 	use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 
+    use ('mfussenegger/nvim-dap')
 	-- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
 	local has_plugins, plugins = pcall(require, 'custom.plugins')
 	if has_plugins then
