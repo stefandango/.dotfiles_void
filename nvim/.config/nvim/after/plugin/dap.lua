@@ -24,7 +24,8 @@ vim.keymap.set('n', '<F11>', function() require('dap').step_into() end , {desc =
 vim.keymap.set('n', '<F12>', function() require('dap').step_out() end, {desc = "Debug: Step Out"})
 vim.keymap.set('n', '<leader>b', function() require('dap').toggle_breakpoint() end , {desc = "Debug: Toggle Breakpoint"})
 vim.keymap.set('n', '<leader>B', ":lua require('dap').set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>" , {desc = "Debug: Toggle Breakpoint condition"})
-vim.keymap.set('n', '<F6>', function() require('dap.ui.widgets').hover() end, {desc = "Hover variables"})
+vim.keymap.set('n', '<F4>', function() require('dap.ui.widgets').hover() end, {desc = "Hover variables"})
+vim.keymap.set('n', '<F3>', function() require('dap').terminate() end, {desc = "Terminate debug session"})
 
 local dapui = require("dapui")
 
