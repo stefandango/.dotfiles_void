@@ -32,13 +32,15 @@ require('packer').startup(function(use)
 		}
 	}
 
-	use({
-		'rose-pine/neovim',
-		as = 'rose-pine',
-		config = function()
-			vim.cmd('colorscheme rose-pine')
-		end
-	})
+	-- use({
+	-- 	'rose-pine/neovim',
+	-- 	as = 'rose-pine',
+	-- 	config = function()
+	-- 		vim.cmd('colorscheme rose-pine')
+	-- 	end
+	-- })
+    use('navarasu/onedark.nvim')
+
 
 	use { -- Highlight, edit, and navigate code
 		'nvim-treesitter/nvim-treesitter',
@@ -79,6 +81,7 @@ require('packer').startup(function(use)
 
 			-- My own
 			{'j-hui/fidget.nvim'},
+            {'hrsh7th/cmp-nvim-lsp-signature-help'}
 		}
 	}
 

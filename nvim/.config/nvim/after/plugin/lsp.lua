@@ -34,9 +34,9 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("n", "<leader>gr", require('telescope.builtin').lsp_references, opts)
   opts["desc"] = "[R]e[n]ame (lsp)"
   vim.keymap.set("n", "<leader>rn", function() vim.lsp.buf.rename() end, opts)
-  opts["desc"] = "[R]e[n]ame (lsp)"
-  vim.keymap.set("i", "<C-k>", function() vim.lsp.buf.signature_help() end, opts)
-  vim.keymap.set("n", "<C-k>", function() vim.lsp.buf.signature_help() end, opts)
+  opts["desc"] = "Signature help (lsp)"
+  -- vim.keymap.set("i", "<C-k>", function() vim.lsp.buf.signature_help() end, opts)
+  -- vim.keymap.set("n", "<C-k>", function() vim.lsp.buf.signature_help() end, opts)
   opts["desc"] = "set loclist (lsp)"
   vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
 end)
