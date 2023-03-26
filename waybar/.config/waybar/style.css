@@ -1,7 +1,3 @@
-/**
- * Ayu style for Waybar
- */
-
 * {
   font-weight: 700;
   /* font-family: 'Iosevka Nerd Font', sans-serif; */
@@ -11,50 +7,42 @@
 
 #waybar {
   background: transparent;
-  color: #6c7680;
+  color: #ABB2BF;
   transition: background-color 0.2s;
 }
 
-#waybar.ayu-mirage {
-  color: #bfbab0;
-}
-
 #waybar.ayu-dark {
-  color: #b3b1ad;
-}
-
-#workspaces {
-  margin: 0 3px 0 1px;
+  color: #ABB2BF;
 }
 
 #workspaces button {
   background: transparent;
   border: none;
   padding: 0 8px;
-}
-
-#workspaces button.focused {
-  color: #ff9940;
-}
-
-#waybar.ayu-mirage #workspaces button.focused {
-  color: #ffcc66;
+  color: #6c7680;
 }
 
 #waybar.ayu-dark #workspaces button.focused {
-  color: #e6b450;
+    color: #98C379;
 }
 
 #workspaces button.urgent {
-  color: #f51818;
+    color: #E06C75;
 }
 
 #waybar.ayu-mirage #workspaces button.urgent {
-  color: #ff3333;
+    color: #E06C75;
 }
 
 #waybar.ayu-dark #workspaces button.urgent {
-  color: #ff3333;
+    color: #E06C75;
+}
+
+.modules-center {
+    background: rgba(30, 30, 30, 1);
+    border-radius: 0 0 12px 12px;
+    padding: 0 20px 0 20px;
+    opacity: 0.5;
 }
 
 #battery,
