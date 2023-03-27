@@ -97,6 +97,8 @@ require('packer').startup(function(use)
 	use ('lukas-reineke/indent-blankline.nvim') -- Add indentation guides even on blank lines
 	use ('numToStr/Comment.nvim') -- "gc" to comment visual regions/lines
 	use ('karb94/neoscroll.nvim') -- smoothscroll when using c-d / c-u
+    use ('mrjones2014/nvim-ts-rainbow')
+
 
 	--use ('navarasu/onedark.nvim')
 	--use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
