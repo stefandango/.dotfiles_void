@@ -198,7 +198,7 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+r mode "resize"
+bindsym $mod+r mode "resize" 
 
 bindsym $mod+Shift+s exec ~/.local/bin/swap-workspaces.sh
 
@@ -207,7 +207,7 @@ for_window [title="floating-*"]   floating enable
 #insync float
 for_window [title="Insync"]   floating enable
 #popup term (primary for clickevents in waybar
-for_window [title="popup_term"]   floating enable 
+for_window [title="popup_term"]   floating enable, resize set 1620 1260
 #pavucontontrol
 for_window [app_id="pavucontrol"]   floating enable 
 # Status Bar:
