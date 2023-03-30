@@ -31,14 +31,19 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("n", "<leader>ca", function() vim.lsp.buf.code_action() end, opts)
   opts["desc"] = "[G]oto [R]eferences (lsp)"
   --vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
-  vim.keymap.set("n", "<leader>gr", require('telescope.builtin').lsp_references, opts)
+  --vim.keymap.set("n", "<leader>gr", require('telescope.builtin').lsp_references, opts)
+  vim.keymap.set("n", "<leader>gr", "<cmd>TroubleToggle lsp_references<cr>", opts)
+
   opts["desc"] = "[R]e[n]ame (lsp)"
   vim.keymap.set("n", "<leader>rn", function() vim.lsp.buf.rename() end, opts)
   opts["desc"] = "Signature help (lsp)"
   vim.keymap.set("i", "<C-k>", function() vim.lsp.buf.signature_help() end, opts)
   vim.keymap.set("n", "<C-k>", function() vim.lsp.buf.signature_help() end, opts)
   opts["desc"] = "set loclist (lsp)"
-  vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist)
+
+  --vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, opts)
+  vim.keymap.set('n', '<leader>q', "<cmd>TroubleToggle document_diagnostics<cr>", opts)
+  vim.keymap.set('n', '<leader>Q', "<cmd>TroubleToggle workspace_diagnostics<cr>", opts)
 end)
 
 lsp.setup()
