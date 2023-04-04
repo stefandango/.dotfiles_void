@@ -7,7 +7,7 @@
       "sway/workspaces",
   "sway/mode"
   ],
-  "modules-left": ["clock", "custom/wttr", "custom/xbps"
+  "modules-left": ["clock", "custom/wttr", "custom/xbps", "custom/docker"
   ],
   "modules-right": [
     "keyboard-state",
@@ -31,18 +31,6 @@
   "sway/workspaces": {
       "all-outputs": true,
       "format": "{icon}",
-      /* "format-icons": { */
-      /*     "1": "", */
-      /*     "2": "", */
-      /*     "3": "", */
-      /*     "4": "", */
-      /*     "5": "", */
-      /*     "6": "", */
-      /*     "7": "", */
-      /*     "urgent": "", */
-      /*     "focused": "", */
-      /*     "default": "", */
-      /* } */
   "format-icons": {
           "1": "",
           "2": "",
@@ -75,37 +63,10 @@
     "spacing": 22
   },
   "clock": {
-    "format": "{:%H:%M}",
+    "format": "{:%a, %b %d - %H:%M}",
     "format-alt": "{:%A, %B %d}",
     "tooltip": false
   },
-  /* "custom/system": { */
-  /*   "format": "", */
-  /*   "on-click": "swaynag -t ayu-mirage -m '' -b 'Exit' 'swaymsg exit' -b 'Reload' 'swaymsg reload' -b 'Reboot' 'swaymsg exec systemctl reboot' -b 'Shut down' 'systemctl poweroff'", */
-  /*   "on-click-right": "swaymsg mode System" */
-  /* }, */
-  /* "custom/browser": { */
-  /*   "format": "", */
-  /*   "tooltip": false, */
-  /*   "on-click": "if pgrep -x firefox-bin; then swaymsg [app_id=\"firefox\"] focus; else firefox-nightly; fi", */
-  /*   "on-click-right": "firefox-nightly --new-window" */
-  /* }, */
-  /* "custom/files": { */
-  /*   "format": "", */
-  /*   "tooltip": false, */
-  /*   "on-click": "nautilus" */
-  /* }, */
-  /* "custom/editor": { */
-  /*   "format": "", */
-  /*   "tooltip": false, */
-  /*   "on-click": "if pgrep -x code-insiders; then swaymsg [instance=\"code - insiders\"] focus; else code-insiders; fi" */
-  /* }, */
-  /* "custom/terminal": { */
-  /*   "format": "", */
-  /*   "tooltip": false, */
-  /*   "on-click": "swaymsg scratchpad show", */
-  /*   "on-click-right": "urxvt -bg rgba:1000/1000/1000/0000 -T transparent_term" */
-  /* }, */
   "custom/xbps": {
       "format": "↓ {}",
           "return-type": "json",
@@ -114,6 +75,13 @@
           "on-click": "kitty --hold -T popup_term -e sudo xbps-install -Su; pkill -SIGRTMIN+8 waybar",
           "signal": 8
   },  
+  "custom/docker": {
+      "format": "<span font='20' rise='-4000'></span>  {}",
+          "return-type": "json",
+          "exec": "~/.local/bin/waybar-docker.sh",
+          "interval": 10,
+          "on-click": "kitty --hold -T popup_term -e docker ps"
+  }, 
   "custom/disks": {
     "exec": "~/.local/bin/waybar-diskinfo.sh",
     "return-type": "json",
@@ -178,7 +146,7 @@
       "on-click": "wlogout -c 5 -r 5 -p layer-shell"
   },
   "custom/razerviperbattery": {
-      "interval": 15,
+      "interval": 10,
       "exec": "~/.local/bin/viper_battery.py",
        "return-type": "json",
       "tooltip": false
