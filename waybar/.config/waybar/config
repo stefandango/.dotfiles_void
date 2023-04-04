@@ -3,15 +3,14 @@
   "layer": "top",
   "position": "top",
   "height": 50,
-  "modules-left": [
+  "modules-center": [
       "sway/workspaces",
   "sway/mode"
   ],
-  "modules-center": ["clock", "custom/wttr"
+  "modules-left": ["clock", "custom/wttr", "custom/xbps"
   ],
   "modules-right": [
     "keyboard-state",
-    "custom/xbps",
     "custom/razerviperbattery",
     "custom/disks",
     "memory",
