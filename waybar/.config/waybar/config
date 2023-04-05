@@ -63,7 +63,7 @@
     "spacing": 22
   },
   "clock": {
-    "format": "{:%a, %b %d - %H:%M}",
+    "format": "{:<span font='15' rise='-3000'></span>  %a, %b %d - %H:%M}",
     "format-alt": "{:%A, %B %d}",
     "tooltip": false
   },
