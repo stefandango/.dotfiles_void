@@ -1,7 +1,8 @@
 * {
-  font-weight: 700;
-  /* font-family: "JetBrains Mono SemiBold Nerd Font Complete Mono"; */
-  font-family: "Sauce Code Pro Semibold Nerd Font Complete Mono";
+  font-weight: 800;
+  font-family: "JetBrains Mono SemiBold Nerd Font Complete Mono"; 
+  /*font-family: "Sauce Code Pro Semibold Nerd Font Complete Mono";*/
+  /* font-family: "VictorMono NFM Semi-Bold"; */
   font-size: 12px;
 }
 

@@ -39,6 +39,7 @@ vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
 vim.opt.colorcolumn = "120"
+vim.opt.cmdheight = 0
 
 -- [[ Basic Keymaps ]]
 -- Set <space> as the leader key
