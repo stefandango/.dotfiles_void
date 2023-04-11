@@ -114,6 +114,13 @@
   margin: 10px;
 }
 
+#custom-clipboard {
+    padding: 0 15px;
+    border-radius: 12px;
+    margin: 10px;
+    background: rgba(30, 30, 30, 0.5);
+}
+
 #idle_inhibitor {
   padding: 0 18px;
 }

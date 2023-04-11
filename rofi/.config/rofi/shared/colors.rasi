@@ -1,0 +1,10 @@
+* {
+    /* background:     #282C34; */
+    background:     rgb(40, 44, 52, 85%);
+    background-alt: rgb(40, 44, 52, 85%);
+    foreground:     #ABB2BF;
+    selected:       rgb(86, 181, 194, 85%);
+    border:         #98C379;
+    active:         rgb(152, 195, 120, 85%);
+    urgent:         #E06C75;
+}
