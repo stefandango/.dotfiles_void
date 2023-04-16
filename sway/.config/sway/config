@@ -73,8 +73,8 @@ input * {
 
     # Start your launcher
     #bindsym $mod+d exec $menu
-    bindsym $mod+d exec "pkill rofi || zsh ~/.config/rofi/bin/launcher"
-    bindsym ALT+Tab exec "pkill rofi || bash ~/.config/rofi/bin/swytch"
+    bindsym $mod+d exec "pkill rofi || zsh ~/.config/rofi/bin/launcher &"
+    bindsym ALT+Tab exec "pkill rofi || bash ~/.config/rofi/bin/swytch &"
 
 
     # Drag floating windows by holding down $mod and left mouse button.
@@ -250,15 +250,16 @@ exec ~/.local/bin/wallpaper-shuffle.sh &
 #exec wl-paste -t text --watch clipman store --max-items 1024
 #bindsym $mod+y exec clipman pick --tool="fuzzel" --max-items=30
 
+
 #exec wl-paste -n -t text --watch cliphist store --max-items=60 --histpath="~/.local/share/clipboard.json"
 exec wl-paste --watch cliphist store -max-items 30 &
 
 #bindsym $mod+y exec clipman pick --tool="wofi" --max-items=30 --histpath="~/.local/share/clipman.json"
 #bindsym $mod+y exec clipman pick --tool="rofi" --max-items=30 --histpath="~/.local/share/clipman.json"
-bindsym $mod+y exec "pkill rofi || ~/.config/rofi/bin/clipboard"
+bindsym $mod+y exec "pkill rofi || ~/.config/rofi/bin/clipboard &"
 
 #WAYBAR clipboard events...
-set $clipboard "pkill rofi || ~/.config/rofi/bin/clipboard"
+set $clipboard "pkill rofi || ~/.config/rofi/bin/clipboard &"
 set $clipboard-del "pkill rofi || ~/.config/rofi/bin/clipboard-delete && pkill -RTMIN+9 waybar"
 set $clipboard-del-all "cliphist wipe && pkill -RTMIN+9 waybar"
 
@@ -269,6 +270,8 @@ exec pipewire-pulse &
 
 #Google drive
 exec insync start &
+
+#exec sleep 3 && dhcpcd-qt &
 
 #Notification app
 exec mako & 
