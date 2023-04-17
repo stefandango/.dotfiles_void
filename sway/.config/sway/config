@@ -75,6 +75,7 @@ input * {
     #bindsym $mod+d exec $menu
     bindsym $mod+d exec "pkill rofi || zsh ~/.config/rofi/bin/launcher &"
     bindsym ALT+Tab exec "pkill rofi || bash ~/.config/rofi/bin/swytch &"
+    
 
 
     # Drag floating windows by holding down $mod and left mouse button.
@@ -89,7 +90,7 @@ input * {
 
     # Exit sway (logs you out of your Wayland session)
     #bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
-    bindsym $mod+Shift+e exec wlogout
+   # bindsym $mod+Shift+e exec wlogout
 #
 # Moving around:
 #
@@ -263,7 +264,8 @@ set $clipboard "pkill rofi || ~/.config/rofi/bin/clipboard &"
 set $clipboard-del "pkill rofi || ~/.config/rofi/bin/clipboard-delete && pkill -RTMIN+9 waybar"
 set $clipboard-del-all "cliphist wipe && pkill -RTMIN+9 waybar"
 
-
+set $powermenu "pkill rofi || bash ~/.config/rofi/bin/powermenu"
+bindsym $mod+Shift+e exec $powermenu
 #PIPEWIRE SOUND #https://www.reddit.com/r/voidlinux/comments/lp5w87/how_i_got_pipewire_working_on_void_as_a_pulse/iu
 exec pipewire &
 exec pipewire-pulse &

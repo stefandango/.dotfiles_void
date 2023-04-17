@@ -20,7 +20,7 @@
     "pulseaudio",
     "network",
     "tray",
-    "custom/wlogout"
+    "custom/logout"
   ],
   "custom/separator": {
     "format": "·",
@@ -151,10 +151,10 @@
           "unlocked": ""
       }
   },
-  "custom/wlogout": {
+  "custom/logout": {
       "interval": "once",
+      "on-click": "swaymsg -q exec '$powermenu'",
       "format": "",
-      "on-click": "wlogout -c 5 -r 5 -p layer-shell"
   },
   "custom/razerviperbattery": {
       "interval": 10,
