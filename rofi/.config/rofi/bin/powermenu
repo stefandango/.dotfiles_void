@@ -74,7 +74,7 @@ run_cmd() {
 	if [[ "$1" == '--opt1' ]]; then
 		exec ~/.config/hypr/bin/lock.sh
 	elif [[ "$1" == '--opt2' ]]; then
-		confirm_run 'pkill sway'
+		confirm_run "loginctl terminate-user $USER"
 	elif [[ "$1" == '--opt3' ]]; then
 		confirm_run 'loginctl reboot'
 	elif [[ "$1" == '--opt4' ]]; then

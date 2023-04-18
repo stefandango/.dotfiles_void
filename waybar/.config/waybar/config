@@ -37,7 +37,7 @@
       "signal": 9
   },
   "sway/mode": {
-    "format": "---{}---"
+     "format": "{}"
   },
   "sway/workspaces": {
       "all-outputs": true,
@@ -85,7 +85,7 @@
           "interval": 600,
           "on-click": "kitty --hold -T popup_term -e sudo xbps-install -Su; pkill -SIGRTMIN+8 waybar",
           "signal": 8
-  },  
+  },
   "custom/docker": {
       "format": "<span font='20' rise='-4000'></span>  {}",
           "return-type": "json",
