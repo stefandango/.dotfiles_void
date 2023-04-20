@@ -37,7 +37,7 @@
       "signal": 9
   },
   "sway/mode": {
-     "format": "{}"
+     "format": " {}"
   },
   "sway/workspaces": {
       "all-outputs": true,
@@ -127,14 +127,32 @@
 
     "on-click-right": "pavucontrol",
     "tooltip": false
-  }, "temperature": { "thermal-zone": 2, "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input", "critical-threshold": 80, "on-click": "kitty --hold -T popup_term -e btop", "format-critical": "{temperatureC}°C ", "format": " {temperatureC}°C" }, "cpu": { "on-click": "kitty --hold -T popup_term -e btop", "tooltip": false, "format": "  {}%" }, "network": { "format": "{icon}  {ifname}", "format-wifi": "{icon}  {essid}", "format-ethernet": "{icon}  {ipaddr}", "format-disconnected": "Offline",
+  }, 
+  "temperature": { 
+      "thermal-zone": 2, "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input", 
+      "critical-threshold": 80, 
+      "on-click": 
+      "kitty --hold -T popup_term -e btop", 
+      "format-critical": "{temperatureC}°C ", 
+      "format": " {temperatureC}°C" }, 
+      "cpu": { 
+          "on-click": "kitty --hold -T popup_term -e btop", 
+          "tooltip": false, 
+          "format": "  {}%" 
+          }, 
+  "network": { 
+      "format": "{icon}  {ifname}", 
+      "format-wifi": "{icon}  {essid}", 
+      "format-ethernet": "{icon}  {ipaddr}", 
+      "format-disconnected": "Offline",
     "format-icons": {
       "wifi": [""],
       "ethernet": [""],
       "disconnected": [""]
     },
     "tooltip": true,
-    "tooltip-format": "Network:{ifname}\nIP:{ipaddr}\nRate: {bandwidthUpBits} / {bandwidthDownBits}"
+    "tooltip-format": "Network:{ifname}\nIP:{ipaddr}\nRate: {bandwidthUpBits} / {bandwidthDownBits}",
+    "on-click": "swaymsg -q exec '$networkmenu'",
   },
   "memory": {
     "interval": 30,

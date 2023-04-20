@@ -266,6 +266,9 @@ set $clipboard-del-all "cliphist wipe && pkill -RTMIN+9 waybar"
 
 set $powermenu "pkill rofi || bash ~/.config/rofi/bin/powermenu"
 bindsym $mod+Shift+e exec $powermenu
+
+set $networkmenu "pkill rofi || bash ~/.config/rofi/bin/network"
+bindsym $mod+Shift+n exec $networkmenu
 #PIPEWIRE SOUND #https://www.reddit.com/r/voidlinux/comments/lp5w87/how_i_got_pipewire_working_on_void_as_a_pulse/iu
 exec pipewire &
 exec pipewire-pulse &

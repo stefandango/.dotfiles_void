@@ -4,8 +4,8 @@
 
 # Import Current Theme
 DIR="$HOME/.config"
-RASI="$DIR/rofi/launcher.rasi"
+RASI="$DIR/rofi/network.rasi"
 
 rofi \
-    -show drun \
-	-theme ${RASI} \
+    -show ssh \
+	-theme ${RASI}
