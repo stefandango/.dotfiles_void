@@ -251,7 +251,6 @@ exec ~/.local/bin/wallpaper-shuffle.sh &
 #exec wl-paste -t text --watch clipman store --max-items 1024
 #bindsym $mod+y exec clipman pick --tool="fuzzel" --max-items=30
 
-
 #exec wl-paste -n -t text --watch cliphist store --max-items=60 --histpath="~/.local/share/clipboard.json"
 exec wl-paste --watch cliphist store -max-items 30 &
 
