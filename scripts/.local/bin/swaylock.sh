@@ -14,4 +14,5 @@ swaylock --screenshots \
             --separator-color 000000 \
             --grace 3 \
             --fade-in 0.5 \
-            --effect-greyscale -d
+            --effect-greyscale -d \
+            #--effect-pixelate 10

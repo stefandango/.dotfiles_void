@@ -32,7 +32,7 @@
 	#
 	# Example configuration:
 	#
-set $SWAYLOCK "zsh ~/.local/bin/swaylock.sh"
+set $SWAYLOCK "swaylock.sh"
 bindsym $mod+Ctrl+l exec $SWAYLOCK
 	 exec swayidle -w \
 	          timeout 300 $SWAYLOCK \
@@ -206,7 +206,7 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize" 
 
-bindsym $mod+Shift+s exec ~/.local/bin/swap-workspaces.sh
+bindsym $mod+Shift+s exec swap-workspaces.sh
 
 # anything with floating title floats.
 for_window [title="floating-*"]   floating enable
@@ -246,7 +246,7 @@ output DP-2 adaptive_sync on
 
 #WAPPPAPER
 #exec ~/Scripts/Wallpaper/wallpaper-shuffle.sh &
-exec ~/.local/bin/wallpaper-shuffle.sh &
+exec wallpaper-shuffle.sh &
 
 #CLIPBOARD MANAGER
 #set $clipboard "~/.local/share/clipman.json"
@@ -270,6 +270,10 @@ bindsym $mod+Shift+e exec $powermenu
 
 set $networkmenu "pkill rofi || bash ~/.config/rofi/bin/network"
 bindsym $mod+Shift+n exec $networkmenu
+
+#Notification app
+exec mako & 
+
 #PIPEWIRE SOUND #https://www.reddit.com/r/voidlinux/comments/lp5w87/how_i_got_pipewire_working_on_void_as_a_pulse/iu
 exec pipewire &
 exec pipewire-pulse &
@@ -277,10 +281,7 @@ exec pipewire-pulse &
 #Google drive
 exec insync start &
 
+
+exec sleep 3 && nm-applet --indicator
+
 #exec sleep 3 && dhcpcd-qt &
-
-#Notification app
-exec mako & 
-
-# REFRESH WAYBAR
-exec ~/.local/bin/waybar-refresh.sh &
