@@ -34,3 +34,6 @@ vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>", {des
 
 -- Command to make current file executable..
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", {desc="set chmod+x for current file..", silent = true })
+
+--stupid animation for funs and giggles
+vim.keymap.set("n", "<leader>fml", "<cmd>CellularAutomaton make_it_rain<CR>")

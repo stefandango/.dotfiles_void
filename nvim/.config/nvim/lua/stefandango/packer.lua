@@ -124,7 +124,18 @@ require('packer').startup(function(use)
             }
         end
     }
-    use('glepnir/dashboard-nvim') 
+
+    -- Cool dashboard when starting nvim
+    use('glepnir/dashboard-nvim')
+
+    --  Highlight words under cursor
+    -- use('RRethy/vim-illuminate')
+
+    -- highlight kitty
+    use("fladson/vim-kitty")
+
+    -- funstuff...
+    use 'eandrju/cellular-automaton.nvim' 
 
     -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
     local has_plugins, plugins = pcall(require, 'custom.plugins')
