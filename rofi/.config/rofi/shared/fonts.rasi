@@ -1,4 +1,5 @@
 /* Text Font */
 * {
-    font: "JetBrains Mono SemiBold Nerd Font Complete Mono 12";
+/*    font: "JetBrains Mono SemiBold Nerd Font Complete Mono 12";*/
+font: "MonoLisaSemiBold Nerd Font Semi-Bold 12";
 }

@@ -1,12 +1,8 @@
-/**
- * Copyright (C) 2020-2022 Aditya Shakya <adi1090x@gmail.com>
- **/
-
 /*****----- Configuration -----*****/
 configuration {
     terminal:                   "kitty";
 	modi:                       "ssh";
-    show-icons:                 true;
+    show-icons:                 false;
     display-ssh:               " SSH";
     click-to-exit:              true;
     sort:                       false;
@@ -249,7 +245,7 @@ element-text {
 
 /*****----- Mode Switcher -----*****/
 mode-switcher{
-    enabled:                     true;
+    enabled:                     false;
     expand:                      false;
     spacing:                     10px;
     margin:                      0px;
