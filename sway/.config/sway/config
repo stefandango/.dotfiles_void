@@ -263,7 +263,7 @@ bindsym $mod+y exec "pkill rofi || ~/.config/rofi/bin/clipboard &"
 #WAYBAR clipboard events...
 set $clipboard "pkill rofi || ~/.config/rofi/bin/clipboard &"
 set $clipboard-del "pkill rofi || ~/.config/rofi/bin/clipboard-delete && pkill -RTMIN+9 waybar"
-set $clipboard-del-all "cliphist wipe && pkill -RTMIN+9 waybar"
+set $clipboard-del-all "cliphist wipe && pkill -RTMIN+9 waybar && notify-send \'Cleared clipboard history\'..""
 
 set $powermenu "pkill rofi || bash ~/.config/rofi/bin/powermenu"
 bindsym $mod+Shift+e exec $powermenu
@@ -271,8 +271,11 @@ bindsym $mod+Shift+e exec $powermenu
 set $networkmenu "pkill rofi || bash ~/.config/rofi/bin/network"
 bindsym $mod+Shift+n exec $networkmenu
 
+#exec dbus-daemon --session --address=unix:path=$XDG_RUNTIME_DIR/bus &
 #Notification app
 exec mako & 
+#exec dunst &
+
 
 #PIPEWIRE SOUND #https://www.reddit.com/r/voidlinux/comments/lp5w87/how_i_got_pipewire_working_on_void_as_a_pulse/iu
 exec pipewire &

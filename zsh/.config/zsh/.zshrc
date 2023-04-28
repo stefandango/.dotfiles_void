@@ -105,6 +105,6 @@ alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
 # ZSH keybinding
 bindkey -s ^f "tmux-sessionizer\n"
 
-neofetch --config ~/.config/neofetch/config.small.conf --source ~/Images/bender.jpg
+neofetch --config ~/.config/neofetch/config.small.conf --source ~/Images/Void_Linux_logo.svg
 
 eval "$(starship init zsh)"

@@ -19,6 +19,7 @@
     "temperature",
     "pulseaudio",
     "network",
+    "custom/notifications",
     "tray",
     "custom/logout"
   ],
