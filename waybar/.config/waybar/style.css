@@ -131,8 +131,8 @@
   padding: 8px;
 }
 
-#custom-system, #custom-logout{
-  margin-right: 20px;
+#custom-system, #custom-logout, #custom-notifications {
+  margin-right: 10px;
   margin-left: 10px;
   font-size: 16px;
 }

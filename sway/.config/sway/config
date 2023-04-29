@@ -263,7 +263,7 @@ bindsym $mod+y exec "pkill rofi || ~/.config/rofi/bin/clipboard &"
 #WAYBAR clipboard events...
 set $clipboard "pkill rofi || ~/.config/rofi/bin/clipboard &"
 set $clipboard-del "pkill rofi || ~/.config/rofi/bin/clipboard-delete && pkill -RTMIN+9 waybar"
-set $clipboard-del-all "cliphist wipe && pkill -RTMIN+9 waybar && notify-send \'Cleared clipboard history\'..""
+set $clipboard-del-all "cliphist wipe && pkill -RTMIN+9 waybar && notify-send \'Cleared clipboard history\'.." -i clipboard"
 
 set $powermenu "pkill rofi || bash ~/.config/rofi/bin/powermenu"
 bindsym $mod+Shift+e exec $powermenu
