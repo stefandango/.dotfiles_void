@@ -244,6 +244,10 @@ smart_borders on
 #swaymsg -t get_outputs <- view outputs
 output DP-2 adaptive_sync on
 
+exec_always {
+  gsettings set org.gnome.desktop.interface gtk-theme "Arc-Darker"
+  gsettings set org.gnome.desktop.interface icon-theme "breeze-dark"
+}
 #WAPPPAPER
 #exec ~/Scripts/Wallpaper/wallpaper-shuffle.sh &
 exec wallpaper-shuffle.sh &
