@@ -110,9 +110,11 @@
     "tooltip": false
   },
   "pulseaudio": {
-    "format": "{icon}  {volume}%",
+    "format": "<span font='16' rise='-3000'>{icon}</span> {volume}% {format_source}",
     "format-bluetooth": "{icon} ",
-    "format-muted": "",
+    "format-source": " {volume}%",
+    "format-source-muted": "",
+    "format-muted": "<span font='16' rise='-3000'></span> {format_source}",
     "format-icons": {
       "headphones": "",
       "handsfree": "",
@@ -124,8 +126,7 @@
     },
     "scroll-step": 5,
     "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-    /*"on-click-middle": "pavucontrol",*/
-
+    "on-click-middle": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
     "on-click-right": "pavucontrol",
     "tooltip": false
   }, 
@@ -185,8 +186,12 @@
       "interval": "once",
       "exec": "~/.local/bin/waybar-notifications.sh",
       "on-click": "~/.local/bin/waybar-notifications-toggle.sh; pkill -SIGRTMIN+10 waybar",
+      "on-click-right": "makoctl restore",
+      "on-click-middle": "makoctl dismiss -a",
       "format": "{}",
       "return-type": "json",
-      "signal": 10
+      "signal": 10,
+      "tooltip": true,
+      "tooltip-format": "click: toggle do not disturb\nrightclick: restore previous notifications\nmiddleclick: dismiss all"
   }
 }
