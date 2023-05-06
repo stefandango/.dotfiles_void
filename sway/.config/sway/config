@@ -292,7 +292,7 @@ exec pipewire-pulse &
 exec insync start &
 
 #protonmail brige
-#exec protonmail-bridge &
+exec protonmail-bridge -no-window &
 
 exec sleep 3 && nm-applet --indicator
 

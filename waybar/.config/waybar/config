@@ -10,17 +10,17 @@
   "modules-left": ["clock", "custom/wttr", "custom/xbps", "custom/docker"
   ],
   "modules-right": [
-    "custom/clipboard",
     "keyboard-state",
+    "custom/clipboard",
     "custom/razerviperbattery",
     "custom/disks",
     "memory",
     "cpu",
     "temperature",
     "pulseaudio",
+    "tray",
     "network",
     "custom/notifications",
-    "tray",
     "custom/logout"
   ],
   "custom/separator": {
@@ -136,7 +136,7 @@
       "on-click": 
       "kitty --hold -T popup_term -e btop", 
       "format-critical": "{temperatureC}°C ", 
-      "format": " {temperatureC}°C" }, 
+      "format": "" }, 
       "cpu": { 
           "on-click": "kitty --hold -T popup_term -e btop", 
           "tooltip": false, 
@@ -145,7 +145,7 @@
   "network": { 
       "format": "{icon}  {ifname}", 
       "format-wifi": "{icon}  {essid}", 
-      "format-ethernet": "{icon}  {ipaddr}", 
+      "format-ethernet": "{icon}", 
       "format-disconnected": "Offline",
     "format-icons": {
       "wifi": [""],
@@ -163,7 +163,7 @@
     "tooltip-format": "{used:0.1f}GB / {total:0.1f}GB"
   },
   "keyboard-state": {
-      "numlock": true,
+      "numlock": false,
       "capslock": true,
       "format": "{icon} {name}",
       "format-icons": {
