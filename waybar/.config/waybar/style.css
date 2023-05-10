@@ -76,6 +76,7 @@
 #keybard-state,
 #sway-mode,
 #custom-razerviperbattery,
+#custom-calendarevents,
 #mode {
   padding: 0 12px;
 }
@@ -130,7 +131,7 @@
   margin: 10px;
 }
 
-#custom-clipboard {
+#custom-clipboard, #custom-calendarevents {
     padding: 0 15px;
     border-radius: 12px;
     margin: 10px;

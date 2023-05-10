@@ -7,7 +7,7 @@
       "sway/workspaces",
   "sway/mode"
   ],
-  "modules-left": ["clock", "custom/wttr", "custom/xbps", "custom/docker"
+  "modules-left": ["clock", "custom/calendarevents", "custom/wttr", "custom/xbps", "custom/docker"
   ],
   "modules-right": [
     "keyboard-state",
@@ -193,5 +193,13 @@
       "signal": 10,
       "tooltip": true,
       "tooltip-format": "click: toggle do not disturb\nrightclick: restore previous notifications\nmiddleclick: dismiss all"
-  }
+  },
+  "custom/calendarevents": {
+      "format": "<span font='16' rise='-3000'></span> {}",
+      "on-click": "~/.local/bin/waybar-gcalcli-nextmeeting.sh open",
+      "interval": 10,
+      "exec": "~/.local/bin/waybar-gcalcli-nextmeeting.sh waybar",
+       "return-type": "json",
+      "tooltip": true
+  },
 }

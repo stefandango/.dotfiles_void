@@ -101,6 +101,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias tmux="tmux -f ~/.config/tmux/tmux.conf"
 alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts" 
+alias mbsync="mbsync -c \"$XDG_CONFIG_HOME/isync/mbsyncrc\""
 
 # ZSH keybinding
 bindkey -s ^f "tmux-sessionizer\n"

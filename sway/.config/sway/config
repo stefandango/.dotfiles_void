@@ -1,4 +1,3 @@
-	# Read `man 5 sway` for a complete reference.
 
 	### Variables
 	#
@@ -288,12 +287,14 @@ exec mako &
 exec pipewire &
 exec pipewire-pulse &
 
-#Google drive
-exec insync start &
 
 #protonmail brige
-exec protonmail-bridge -no-window &
+exec sleep 3 && protonmail-bridge -no-window &
 
+#network applet
 exec sleep 3 && nm-applet --indicator
 
-#exec sleep 3 && dhcpcd-qt &
+#Google drive
+exec sleep 3 && insync start &
+#google calendar notifications
+exec "bash gcalcli-remind.sh""
