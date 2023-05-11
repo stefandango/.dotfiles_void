@@ -29,17 +29,17 @@ if [[ $((start_date - current_date)) -gt 0 ]]; then
 		text="Next event in $minutes min"
 	else
 		# text="$event starter om $hours timer og $minutes min"
-		text="Next event in in $hours h and $minutes min"
+		text="Next event in $hours h and $minutes m"
 	fi
 else
 	hours=$((($end_date - $current_date) / 60/ 60))
 	minutes=$((($end_date - $current_date) / 60 - ($hours * 60)))
 	if [[ $hours -eq 0 ]]; then
 		# text="$event slutter om $minutes min"
-		text="Current event ends in $minutes min"
+		text="Current event ends in $minutes m"
 	else
 		# text="$event slutter om $hours timer og $minutes min"
-		text="Current event ends in $hours timer og $minutes min"
+		text="Current event ends in $hours h $minutes m"
 	fi
 fi
 
