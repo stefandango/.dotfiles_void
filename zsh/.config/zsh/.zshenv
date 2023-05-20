@@ -19,7 +19,7 @@ setopt SHARE_HISTORY
 export BMENU_BACKEND=wayland
 export SDL_VIDEODRIVER=wayland
 export MOZ_ENABLE_WAYLAND=1
-export QT_QPA_PLATFORM=wayland;xcb
+export QT_QPA_PLATFORM=wayland
 export QT_WAYLAND_FORCE_DPI=physicail
 export KITTY_ENABLE_WAYLAND=1
 
@@ -28,6 +28,8 @@ export PROJECTS="~/Dev"
 
 # NPM
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
+# Node
+export PATH="$XDG_DATA_HOME/npm/bin:$PATH"
 
 # Python
 export PYTHONSTARTUP="/etc/python/pythonrc"
