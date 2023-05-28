@@ -277,6 +277,8 @@ bindsym $mod+Shift+e exec $powermenu
 set $networkmenu "pkill rofi || bash ~/.config/rofi/bin/network"
 bindsym $mod+Shift+n exec $networkmenu
 
+bindsym Shift+Print exec grimshot --notify save area
+
 #exec dbus-daemon --session --address=unix:path=$XDG_RUNTIME_DIR/bus &
 #Notification app
 exec mako & 
