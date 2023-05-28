@@ -1,3 +1,6 @@
 [user]
 	email = 5796872+stefandango@users.noreply.github.com
 	name = Stefan
+[core]
+    autocrlf = input
+    editor = nvim

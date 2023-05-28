@@ -52,7 +52,7 @@ case $1 in
 ;;
 "waybar")
 	cat <<EOF 
-	{"text": "$text", "tooltip": "$(echo $events | sed 's/\\n/\n/g')"}
+	{"text": "$text", "tooltip": "$(echo $events | sed -z 's/\\n/\r/g')"}
 EOF
 ;;
 *)
