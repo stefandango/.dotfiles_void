@@ -259,6 +259,7 @@ exec wallpaper-shuffle.sh &
 #exec wl-paste -t text --watch clipman store --max-items 1024
 #bindsym $mod+y exec clipman pick --tool="fuzzel" --max-items=30
 
+
 #exec wl-paste -n -t text --watch cliphist store --max-items=60 --histpath="~/.local/share/clipboard.json"
 exec wl-paste --watch cliphist store -max-items 30 &
 
@@ -278,6 +279,11 @@ set $networkmenu "pkill rofi || bash ~/.config/rofi/bin/network"
 bindsym $mod+Shift+n exec $networkmenu
 
 bindsym Shift+Print exec grimshot --notify save area
+
+#Autostart scratchpad
+exec $term --class Term_Scratchpad nvim ~/Insync/stefanoep@gmail.com/Google\ Drive/Notes/todo
+for_window [app_id="Term_Scratchpad"] move scratchpad, resize set 1620 1260
+
 
 #exec dbus-daemon --session --address=unix:path=$XDG_RUNTIME_DIR/bus &
 #Notification app
