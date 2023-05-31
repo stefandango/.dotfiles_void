@@ -282,7 +282,8 @@ bindsym Shift+Print exec grimshot --notify save area
 
 #Autostart scratchpad
 exec $term --class Term_Scratchpad nvim ~/Insync/stefanoep@gmail.com/Google\ Drive/Notes/todo
-for_window [app_id="Term_Scratchpad"] move scratchpad, resize set 1620 1260
+for_window [app_id="Term_Scratchpad"] move scratchpad, resize set 1260 780
+bindsym --to-code $mod+minus [app_id="..."] scratchpad show, resize set 1260 780, move position center
 
 
 #exec dbus-daemon --session --address=unix:path=$XDG_RUNTIME_DIR/bus &
