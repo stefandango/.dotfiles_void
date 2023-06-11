@@ -10,6 +10,10 @@ export XDG_SESSION_TYPE=wayland
 
 export ZSH="$XDG_DATA_HOME/.oh-my-zsh"
 export PATH="$HOME/Scripts:$HOME/.local/bin:$PATH"
+
+#Add visual studio code
+export PATH="$HOME/Scripts/VSCode-linux-x64/bin:$PATH"
+
 export HISTFILE="$XDG_STATE_HOME/zsh/.zsh_history"
 HISTSIZE=1000
 SAVEHIST=1000
