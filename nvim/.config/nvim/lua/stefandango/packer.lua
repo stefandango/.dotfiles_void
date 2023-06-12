@@ -134,7 +134,21 @@ require('packer').startup(function(use)
     -- highlight kitty
     use("fladson/vim-kitty")
 
-    -- funstuff...
+
+    use({
+	"Pocco81/auto-save.nvim",
+	config = function()
+		 require("auto-save").setup {
+		 }
+	end,
+    })
+
+    -- Enable auto comments <leader>d while being on function
+    use {
+        'kkoomen/vim-doge',
+        run = ':call doge#install()'
+    }
+    -- funstuff... <leader>fml
     use 'eandrju/cellular-automaton.nvim' 
 
     -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
