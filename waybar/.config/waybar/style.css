@@ -130,6 +130,14 @@
   border-radius: 12px;
   margin: 10px;
 }
+#custom-razerviperbattery.charging {
+  background-color: #98C379;
+  color: #282C34;
+  padding: 0 8px;
+  border-radius: 12px;
+  margin: 10px;
+  font-size: 16px;
+}
 
 #custom-clipboard, #custom-calendarevents {
     padding: 0 15px;
