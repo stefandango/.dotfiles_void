@@ -4,3 +4,11 @@
 [core]
     autocrlf = input
     editor = nvim
+[merge]
+	ff = false
+[difftool]
+    promt = true
+[diff]
+    tool = nvimdiff
+[difftool]
+    cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
