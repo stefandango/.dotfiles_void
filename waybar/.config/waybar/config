@@ -201,5 +201,5 @@
       "exec": "~/.local/bin/waybar-gcalcli-nextmeeting.sh waybar",
        "return-type": "json",
       "tooltip": true
-  },
+  }
 }
