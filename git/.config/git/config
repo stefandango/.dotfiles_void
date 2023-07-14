@@ -4,17 +4,19 @@
 [core]
     autocrlf = input
     editor = nvim
-[merge]
-	ff = false
 [difftool]
     promt = true
 [diff]
-    tool = nvimdiff
+    #tool = nvimdiff
+    tool = p4merge
 [difftool]
     cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
 [merge]
-	tool = nvimdiff
+    ff = false
+    tool = p4merge
+[mergetool "p4merge"]
+    cmd = p4merge $BASE $LOCAL $REMOTE $MERGED
+[alias]
+	graph = log --all --graph --decorate --oneline
 [mergetool]
 	keepBackup = false
-[mergetool "vimdiff"]
-	cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
