@@ -1,3 +1,3 @@
 
 -- Turn on lsp status information
-require('fidget').setup()
+-- require('fidget').setup()
