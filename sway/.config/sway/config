@@ -307,6 +307,3 @@ exec sleep 3 && nm-applet --indicator
 exec sleep 3 && insync start &
 #google calendar notifications
 exec "bash gcalcli-remind.sh""
-
-exec reload
-
