@@ -1,4 +1,4 @@
-{
+{waybarwaybarwaybarwaybar
   "name": "ayu-dark", /* Options: ayu, ayu-mirage, ayu-dark */
   "layer": "top",
   "position": "top",
@@ -84,7 +84,7 @@
           "return-type": "json",
           "exec": "~/.local/bin/xbps-updates.sh",
           "interval": 600,
-          "on-click": "kitty --hold -T popup_term -e sudo xbps-install -Su; pkill -SIGRTMIN+8 waybar",
+          "on-click": "kitty -T popup_term ~/.local/bin/xbps_runupdate.sh",
           "signal": 8
   },
   "custom/docker": {
@@ -105,7 +105,7 @@
 
   "custom/wttr": {
     "exec": "curl wttr.in/Valby,Denmark?format=\"%c+%t\"",
-    "on-click": "kitty --hold -T popup_term -e curl wttr.in/Valby,Denmark",
+    "on-click": "kitty -T popup_term ~/.local/bin/wttrpopup.sh",
     "interval": 1800,
     "tooltip": false
   },
