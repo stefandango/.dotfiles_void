@@ -1,4 +1,4 @@
-{waybarwaybarwaybarwaybar
+{
   "name": "ayu-dark", /* Options: ayu, ayu-mirage, ayu-dark */
   "layer": "top",
   "position": "top",
