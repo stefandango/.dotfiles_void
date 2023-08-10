@@ -92,7 +92,7 @@
           "return-type": "json",
           "exec": "~/.local/bin/waybar-docker.sh",
           "interval": 10,
-          "on-click": "kitty --hold -T popup_term -e docker ps"
+          "on-click": "kitty -T popup_term ~/.local/bin/docker_showcontainers.sh"
   }, 
   "custom/disks": {
     "exec": "~/.local/bin/waybar-diskinfo.sh",
