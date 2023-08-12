@@ -7,7 +7,7 @@
       "sway/workspaces",
   "sway/mode"
   ],
-  "modules-left": ["clock", "custom/calendarevents", "custom/wttr", "custom/xbps", "custom/docker"
+  "modules-left": ["clock", "custom/wttr", "custom/xbps", "custom/docker"
   ],
   "modules-right": [
     "keyboard-state",
