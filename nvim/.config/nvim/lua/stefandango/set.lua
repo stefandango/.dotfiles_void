@@ -41,6 +41,8 @@ vim.opt.isfname:append("@-@")
 vim.opt.colorcolumn = "120"
 vim.opt.cmdheight = 0
 
+vim.opt.shortmess:append('I')
+
 -- [[ Basic Keymaps ]]
 -- Set <space> as the leader key
 -- See `:help mapleader`
