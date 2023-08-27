@@ -104,6 +104,10 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 alias tmux="tmux -f ~/.config/tmux/tmux.conf"
 alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts" 
 alias mbsync="mbsync -c \"$XDG_CONFIG_HOME/isync/mbsyncrc\""
+alias ls="lsd"
+alias la="lsd -al"
+alias ll="lsd -l"
+
 
 # ZSH keybinding
 bindkey -s ^f "tmux-sessionizer\n"
