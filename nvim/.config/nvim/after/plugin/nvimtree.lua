@@ -8,11 +8,11 @@ require("nvim-tree").setup({
     number = true,
     side = "right",
     width = 100,
-    mappings = {
-      list = {
-        { key = "u", action = "dir_up" },
-      },
-    },
+    -- mappings = {
+    --   list = {
+    --     { key = "u", action = "dir_up" },
+    --   },
+    -- },
     float = {
       enable = true,
       open_win_config = function()
