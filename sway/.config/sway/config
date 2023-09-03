@@ -307,3 +307,8 @@ exec sleep 3 && nm-applet --indicator
 exec sleep 3 && insync start &
 #google calendar notifications
 #exec "bash gcalcli-remind.sh""
+
+#Jetbrains Toolbox
+#exec sleep 3 && jetbrains-toolbox &
+exec sleep 3 && ~/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox --minimize &
+

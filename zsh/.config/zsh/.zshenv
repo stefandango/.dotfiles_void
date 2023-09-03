@@ -14,6 +14,9 @@ export PATH="$HOME/Scripts:$HOME/.local/bin:$PATH"
 #Add visual studio code
 export PATH="$HOME/Scripts/VSCode-linux-x64/bin:$PATH"
 
+#Add jetbrains 
+export PATH="$HOME/.local/share/JetBrains/Toolbox/scripts:$HOME/.local/share/JetBrains/ToolBox/bin:$PATH"
+
 export HISTFILE="$XDG_STATE_HOME/zsh/.zsh_history"
 HISTSIZE=1000
 SAVEHIST=1000
