@@ -317,4 +317,4 @@ exec sleep 3 && ~/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox --minimiz
 #exec delay.sh 3 "~/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox --minimize" &
 
 #refresh waybar...
-exec delay.sh 5 "pkill -SIGUSR2 waybar"
+exec delay.sh 3 "pkill -SIGUSR2 waybar"
