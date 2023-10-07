@@ -143,6 +143,10 @@ input * {
     bindsym $mod+Shift+0 move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
+    # Testing bind workspace to specific monitor:
+    workspace 2 output DP-3
+
+#https://github.com/ldelossa/sway-fzfify
 #
 # Layout stuff:
 #
