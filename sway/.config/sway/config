@@ -258,10 +258,6 @@ exec_always {
 #exec ~/Scripts/Wallpaper/wallpaper-shuffle.sh &
 exec wallpaper-shuffle.sh &
 
-#CLIPBOARD MANAGER
-#set $clipboard "~/.local/share/clipman.json"
-#exec wl-paste -t text --watch clipman store --max-items 1024
-#bindsym $mod+y exec clipman pick --tool="fuzzel" --max-items=30
 
 
 #exec wl-paste -n -t text --watch cliphist store --max-items=60 --histpath="~/.local/share/clipboard.json"
@@ -316,9 +312,10 @@ exec delay.sh 3 "insync start" &
 #exec "bash gcalcli-remind.sh""
 
 #Jetbrains Toolbox
-#exec sleep 3 && jetbrains-toolbox &
 exec sleep 3 && ~/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox --minimize &
-#exec delay.sh 3 "~/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox --minimize" &
+
+#Gnome keyring (used for vscode C# devkit login)
+exec gnome-keyring-daemon --start --components=secrets
 
 #refresh waybar...
 exec delay.sh 3 "pkill -SIGUSR2 waybar"
