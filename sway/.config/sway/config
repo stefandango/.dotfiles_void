@@ -222,6 +222,8 @@ for_window [app_id="pavucontrol"]   floating enable
 
 #protonmailbrige
 for_window [app_id="ch.proton.bridge-gui"] floating enable
+
+for_window [title="Welcome to JetBrains Rider"] floating enable
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.

@@ -37,8 +37,11 @@ if response.status_code == 200:
     
     sys.stdout.write("\rExtracting... Done!\n")
     sys.stdout.flush()
-    
+   
     print_colored_message("Script completed successfully!", "green")
 else:
     print("Failed to download the file.")
+
+# Cleanup if UI problematic..
+# rm -rf ~/.config/Code/GPUCache
 
