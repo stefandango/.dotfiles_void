@@ -219,11 +219,11 @@ for_window [title="Insync"]   floating enable
 for_window [title="popup_term"]   floating enable, resize set 1620 1260
 #pavucontontrol
 for_window [app_id="pavucontrol"]   floating enable 
-
-#protonmailbrige
+#ProtonMail
 for_window [app_id="ch.proton.bridge-gui"] floating enable
-
+#Jetbrains rider startup page
 for_window [title="Welcome to JetBrains Rider"] floating enable
+
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
@@ -256,17 +256,11 @@ exec_always {
   gsettings set org.gnome.desktop.interface gtk-theme "Arc-Darker"
   gsettings set org.gnome.desktop.interface icon-theme "breeze-dark"
 }
-#WAPPPAPER
-#exec ~/Scripts/Wallpaper/wallpaper-shuffle.sh &
+#Wallpaper shuffle script
 exec wallpaper-shuffle.sh &
 
-
-
-#exec wl-paste -n -t text --watch cliphist store --max-items=60 --histpath="~/.local/share/clipboard.json"
+#Clipboard
 exec wl-paste --watch cliphist store -max-items 30 &
-
-#bindsym $mod+y exec clipman pick --tool="wofi" --max-items=30 --histpath="~/.local/share/clipman.json"
-#bindsym $mod+y exec clipman pick --tool="rofi" --max-items=30 --histpath="~/.local/share/clipman.json"
 bindsym $mod+y exec "pkill rofi || ~/.config/rofi/bin/clipboard &"
 
 #WAYBAR clipboard events...
@@ -274,12 +268,15 @@ set $clipboard "pkill rofi || ~/.config/rofi/bin/clipboard &"
 set $clipboard-del "pkill rofi || ~/.config/rofi/bin/clipboard-delete && pkill -RTMIN+9 waybar"
 set $clipboard-del-all "cliphist wipe && pkill -RTMIN+9 waybar && notify-send \'Cleared clipboard history\'.." -i clipboard"
 
+#Power menu (turn off/reboot etc)
 set $powermenu "pkill rofi || bash ~/.config/rofi/bin/powermenu"
 bindsym $mod+Shift+e exec $powermenu
 
+#Network menu for SSH connections
 set $networkmenu "pkill rofi || bash ~/.config/rofi/bin/network"
 bindsym $mod+Shift+n exec $networkmenu
 
+#Print screen functionaly
 bindsym Shift+Print exec grimshot --notify save area
 
 #Autostart scratchpad
@@ -288,11 +285,9 @@ for_window [app_id="Term_Scratchpad"] move scratchpad, resize set 1260 780
 bindsym --to-code $mod+minus [app_id="..."] scratchpad show, resize set 1260 780, move position center
 
 
-#exec dbus-daemon --session --address=unix:path=$XDG_RUNTIME_DIR/bus &
 #Notification app
 exec mako & 
 #exec dunst &
-
 
 #PIPEWIRE SOUND #https://www.reddit.com/r/voidlinux/comments/lp5w87/how_i_got_pipewire_working_on_void_as_a_pulse/iu
 exec pipewire &
@@ -300,16 +295,15 @@ exec pipewire-pulse &
 exec wireplumber &
 
 #protonmail brige
-#exec sleep 3 && protonmail-bridge -no-window &
 exec delay.sh 3 "protonmail-bridge -no-window" &
 
 #network applet
-#exec sleep 3 && nm-applet --indicator
 exec delay.sh 3 "nm-applet --indicator" &
 
 #Google drive
-#exec sleep 3 && insync start &
 exec delay.sh 3 "insync start" &
+
+# Calender notidfications  - not really working 
 #google calendar notifications
 #exec "bash gcalcli-remind.sh""
 
@@ -319,5 +313,5 @@ exec sleep 3 && ~/.local/share/JetBrains/Toolbox/bin/jetbrains-toolbox --minimiz
 #Gnome keyring (used for vscode C# devkit login)
 exec gnome-keyring-daemon --start --components=secrets
 
-#refresh waybar...
+#refresh waybar... needs to be tweaked
 exec delay.sh 3 "pkill -SIGUSR2 waybar"
