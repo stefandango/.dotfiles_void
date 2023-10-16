@@ -1,27 +1,25 @@
 * {
-  font-weight: 800;
-/*  font-family: "JetBrains Mono SemiBold Nerd Font Complete Mono"; */
-  /*font-family: "Sauce Code Pro Semibold Nerd Font Complete Mono";*/
-  /* font-family: "VictorMono NFM Semi-Bold"; */
+    font-weight: 800;
+    /*  font-family: "JetBrains Mono SemiBold Nerd Font Complete Mono"; */
     font-family: "MonoLisaMedium Nerd Font";
-  font-size: 12px;
+    font-size: 12px;
 }
 
 #waybar {
-  background: transparent;
-  color: #ABB2BF;
-  transition: background-color 0.2s;
+    background: transparent;
+    color: #ABB2BF;
+    transition: background-color 0.2s;
 }
 
 #waybar.ayu-dark {
-  color: #ABB2BF;
+    color: #ABB2BF;
 }
 
 #workspaces button {
-  background: transparent;
-  border: none;
-  padding: 0 8px;
-  color: #6c7680;
+    background: transparent;
+    border: none;
+    padding: 0 8px;
+    color: #6c7680;
 }
 
 
@@ -78,7 +76,7 @@
 #custom-razerviperbattery,
 #custom-calendarevents,
 #mode {
-  padding: 0 12px;
+    padding: 0 12px;
 }
 
 #keyboard-state label.locked {
@@ -87,7 +85,7 @@
     padding: 0 15px;
     border-radius: 12px;
     margin: 10px;
-  font-size: 12px;
+    font-size: 12px;
 
 }
 
@@ -98,45 +96,44 @@
 }
 
 #custom-xbps {
-  /* background-color: #98C379; */
-  background-color: #E06C75;
-  color: #282C34;
-  padding: 0 15px;
-  /* border-radius: 10px; */
-   border-radius: 12px;
-   margin: 10px;
+    /* background-color: #98C379; */
+    background-color: #E06C75;
+    color: #282C34;
+    padding: 0 15px;
+    /* border-radius: 10px; */
+    border-radius: 12px;
+    margin: 10px;
 }
 #custom-docker {
-  background-color: #E5C07B;
-  color: #282C34;
-  padding: 0 15px;
-  /* border-radius: 10px; */
-   border-radius: 12px;
-   margin: 10px;
+    background-color: #E5C07B;
+    color: #282C34;
+    padding: 0 15px;
+    border-radius: 12px;
+    margin: 10px;
 }
 
 #custom-razerviperbattery.warning {
-  background-color: #E5C07B;
-  color: #282C34;
-  padding: 0 8px;
-  border-radius: 12px;
-  margin: 10px;
+    background-color: #E5C07B;
+    color: #282C34;
+    padding: 0 8px;
+    border-radius: 12px;
+    margin: 10px;
 }
 
 #custom-razerviperbattery.alert {
-  background-color: #E06C75;
-  color: #282C34;
-  padding: 0 8px;
-  border-radius: 12px;
-  margin: 10px;
+    background-color: #E06C75;
+    color: #282C34;
+    padding: 0 8px;
+    border-radius: 12px;
+    margin: 10px;
 }
 #custom-razerviperbattery.charging {
-  background-color: #98C379;
-  color: #282C34;
-  padding: 0 8px;
-  border-radius: 12px;
-  margin: 10px;
-  font-size: 16px;
+    background-color: #98C379;
+    color: #282C34;
+    padding: 0 8px;
+    border-radius: 12px;
+    margin: 10px;
+    font-size: 16px;
 }
 
 #custom-clipboard, #custom-calendarevents {
@@ -147,17 +144,16 @@
 }
 
 #idle_inhibitor {
-  padding: 0 18px;
+    padding: 0 18px;
 }
 
 #tray {
-  opacity: 0.8;
-  padding: 8px;
+    opacity: 0.8;
+    padding: 8px;
 }
 
 #custom-system, #custom-logout, #custom-notifications {
-  margin-right: 10px;
-  margin-left: 10px;
-  font-size: 16px;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 16px;
 }
-
