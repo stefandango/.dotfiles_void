@@ -25,7 +25,7 @@ telescope.setup {
 }
 
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {desc = "[F]ind [f]iles"})
-vim.keymap.set('n', '<leader>fg', builtin.find_files, {desc = "[F]ind [f]iles"})
+vim.keymap.set('n', '<leader>fg', builtin.git_files, {desc = "[F]ind [g]itfiles"})
 vim.keymap.set('n', '<leader>fr', builtin.live_grep, {desc = "[F]ind [g]rep"})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {desc = "[F]ind [b]uffer"})
 --vim.keymap.set('n', '<leader>fh', builtin.help_tags, {desc = "[F]ind [h]elp_tags - nvim docs"})
