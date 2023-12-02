@@ -14,6 +14,9 @@ export PATH="$HOME/Scripts:$HOME/.local/bin:$PATH"
 #Add visual studio code
 export PATH="$HOME/Scripts/VSCode-linux-x64/bin:$PATH"
 
+#Add azure data studio
+export PATH="$HOME/Scripts/azuredatastudio-linux-x64:$PATH"
+
 #Add jetbrains 
 export PATH="$HOME/.local/share/JetBrains/Toolbox/scripts:$HOME/.local/share/JetBrains/ToolBox/bin:$PATH"
 
